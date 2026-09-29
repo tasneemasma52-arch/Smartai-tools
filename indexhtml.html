@@ -1,0 +1,1245 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartAI Tools - Free AI Tools for Creators</title>
+
+<meta name="description"
+content="Free AI tools for YouTubers, creators, students and businesses.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f8fc;
+color:#172033;
+line-height:1.6;
+}
+
+nav{
+height:72px;
+background:white;
+border-bottom:1px solid #e8eaf0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7%;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:25px;
+font-weight:800;
+color:#5b4df5;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+margin-left:25px;
+}
+
+nav a:hover{
+color:#5b4df5;
+}
+
+.hero{
+padding:100px 20px 90px;
+text-align:center;
+background:linear-gradient(135deg,#eeeeff,#ffffff);
+}
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+border-radius:30px;
+background:#e9e6ff;
+color:#5043d7;
+font-weight:bold;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:clamp(40px,7vw,72px);
+line-height:1.08;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#5b4df5;
+}
+
+.hero p{
+max-width:720px;
+margin:auto;
+font-size:19px;
+color:#687083;
+}
+
+.hero-buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 25px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
+}
+
+.btn-primary{
+background:#5b4df5;
+color:white;
+}
+
+.btn-secondary{
+background:white;
+color:#333;
+border:1px solid #ddd;
+}
+
+.section{
+padding:75px 7%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#687083;
+}
+
+.tools-grid{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.tool-card{
+background:white;
+border:1px solid #e5e7ee;
+border-radius:16px;
+padding:27px;
+box-shadow:0 8px 30px rgba(30,40,80,.05);
+transition:.2s;
+}
+
+.tool-card:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(30,40,80,.10);
+}
+
+.tool-icon{
+font-size:35px;
+margin-bottom:12px;
+}
+
+.tool-card h3{
+font-size:21px;
+margin-bottom:8px;
+}
+
+.tool-card p{
+color:#687083;
+margin-bottom:20px;
+}
+
+.tool-button{
+display:block;
+text-align:center;
+background:#5b4df5;
+color:white;
+padding:12px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.tool-area{
+max-width:850px;
+margin:30px auto 0;
+background:white;
+border:1px solid #e5e7ee;
+border-radius:18px;
+padding:30px;
+box-shadow:0 10px 35px rgba(30,40,80,.07);
+}
+
+.tool-area h3{
+font-size:26px;
+margin-bottom:8px;
+}
+
+.tool-area p{
+color:#687083;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin:15px 0 8px;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:14px;
+border:1px solid #d7dae3;
+border-radius:9px;
+font-size:16px;
+font-family:inherit;
+outline:none;
+}
+
+textarea{
+min-height:130px;
+resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+border-color:#5b4df5;
+}
+
+.generate{
+width:100%;
+border:none;
+background:#5b4df5;
+color:white;
+padding:15px;
+border-radius:9px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:18px;
+}
+
+.generate:hover{
+background:#493bd7;
+}
+
+.result{
+margin-top:22px;
+padding:18px;
+background:#f5f6fa;
+border-radius:10px;
+border:1px solid #e4e6ed;
+white-space:pre-wrap;
+}
+
+.copy{
+margin-top:12px;
+padding:9px 15px;
+background:#172033;
+color:white;
+border:0;
+border-radius:7px;
+cursor:pointer;
+}
+
+.monetization{
+background:#172033;
+color:white;
+}
+
+.monetization .section-title p{
+color:#bfc5d2;
+}
+
+.money-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.money-card{
+background:#222b40;
+border:1px solid #35405a;
+border-radius:15px;
+padding:28px;
+}
+
+.money-card h3{
+margin-bottom:10px;
+}
+
+.money-card p{
+color:#c0c6d2;
+}
+
+.ad-box{
+max-width:900px;
+margin:30px auto;
+border:2px dashed #c7cbd6;
+border-radius:12px;
+padding:25px;
+text-align:center;
+color:#777;
+background:#fafafa;
+}
+
+.steps{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.step{
+background:white;
+border:1px solid #e5e7ee;
+border-radius:15px;
+padding:25px;
+text-align:center;
+}
+
+.number{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 15px;
+border-radius:50%;
+background:#5b4df5;
+color:white;
+font-weight:bold;
+}
+
+.faq{
+max-width:800px;
+margin:auto;
+}
+
+details{
+background:white;
+border:1px solid #e5e7ee;
+border-radius:10px;
+padding:18px;
+margin-bottom:12px;
+}
+
+summary{
+font-weight:bold;
+cursor:pointer;
+}
+
+footer{
+background:#101624;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer p{
+color:#aeb5c3;
+margin-top:8px;
+}
+
+@media(max-width:850px){
+
+.tools-grid,
+.money-grid,
+.steps{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+nav{
+padding:0 5%;
+}
+
+nav div:last-child{
+display:none;
+}
+
+.section{
+padding:55px 5%;
+}
+
+.tools-grid,
+.money-grid,
+.steps{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:75px 20px;
+}
+
+.tool-area{
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+SmartAI Tools
+</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="badge">
+✨ Free AI Tools for Creators
+</div>
+
+<h1>
+Create Faster.<br>
+<span>Work Smarter.</span>
+</h1>
+
+<p>
+Simple online tools for YouTubers, social media creators,
+students and small businesses.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#tools" class="btn btn-primary">
+Explore Tools →
+</a>
+
+<a href="#how" class="btn btn-secondary">
+How It Works
+</a>
+
+</div>
+
+</section>
+
+
+<!-- TOOLS -->
+
+<section class="section" id="tools">
+
+<div class="section-title">
+
+<h2>AI Tools</h2>
+
+<p>
+Choose a tool and start creating.
+</p>
+
+</div>
+
+
+<div class="tools-grid">
+
+
+<div class="tool-card">
+
+<div class="tool-icon">🎬</div>
+
+<h3>YouTube Title Generator</h3>
+
+<p>
+Generate catchy YouTube titles for your videos.
+</p>
+
+<a href="#youtube-title" class="tool-button">
+Use Tool
+</a>
+
+</div>
+
+
+<div class="tool-card">
+
+<div class="tool-icon">📝</div>
+
+<h3>YouTube Description Generator</h3>
+
+<p>
+Create descriptions for your YouTube videos.
+</p>
+
+<a href="#youtube-description" class="tool-button">
+Use Tool
+</a>
+
+</div>
+
+
+<div class="tool-card">
+
+<div class="tool-icon">📱</div>
+
+<h3>Social Caption Generator</h3>
+
+<p>
+Generate captions for Instagram, Facebook and TikTok.
+</p>
+
+<a href="#caption" class="tool-button">
+Use Tool
+</a>
+
+</div>
+
+
+<div class="tool-card">
+
+<div class="tool-icon">✍️</div>
+
+<h3>Text Rewriter</h3>
+
+<p>
+Rewrite text into a clearer and more engaging version.
+</p>
+
+<a href="#rewriter" class="tool-button">
+Use Tool
+</a>
+
+</div>
+
+
+<div class="tool-card">
+
+<div class="tool-icon">💡</div>
+
+<h3>Content Ideas Generator</h3>
+
+<p>
+Generate content ideas for your next posts or videos.
+</p>
+
+<a href="#ideas" class="tool-button">
+Use Tool
+</a>
+
+</div>
+
+
+<div class="tool-card">
+
+<div class="tool-icon">🚀</div>
+
+<h3>More Tools Coming</h3>
+
+<p>
+New AI tools will be added as the website grows.
+</p>
+
+<a href="#monetize" class="tool-button">
+Coming Soon
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- TOOL 1 -->
+
+<section class="section" id="youtube-title">
+
+<div class="section-title">
+
+<h2>🎬 YouTube Title Generator</h2>
+
+<p>Generate 10 title ideas instantly.</p>
+
+</div>
+
+<div class="tool-area">
+
+<label>Video Topic</label>
+
+<input
+id="titleTopic"
+placeholder="Example: AI tools for students"
+>
+
+<button class="generate" onclick="generateTitles()">
+✨ Generate Titles
+</button>
+
+<div id="titleResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- TOOL 2 -->
+
+<section class="section" id="youtube-description">
+
+<div class="section-title">
+
+<h2>📝 YouTube Description Generator</h2>
+
+<p>Create a ready-to-edit video description.</p>
+
+</div>
+
+<div class="tool-area">
+
+<label>Video Topic</label>
+
+<input
+id="descriptionTopic"
+placeholder="Example: 5 AI tools for students"
+>
+
+<button class="generate" onclick="generateDescription()">
+✨ Generate Description
+</button>
+
+<div id="descriptionResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- TOOL 3 -->
+
+<section class="section" id="caption">
+
+<div class="section-title">
+
+<h2>📱 Social Media Caption Generator</h2>
+
+<p>Create captions for your social posts.</p>
+
+</div>
+
+<div class="tool-area">
+
+<label>Post Topic</label>
+
+<input
+id="captionTopic"
+placeholder="Example: My new business"
+>
+
+<label>Platform</label>
+
+<select id="platform">
+
+<option>Instagram</option>
+<option>Facebook</option>
+<option>TikTok</option>
+<option>LinkedIn</option>
+
+</select>
+
+<button class="generate" onclick="generateCaption()">
+✨ Generate Caption
+</button>
+
+<div id="captionResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- TOOL 4 -->
+
+<section class="section" id="rewriter">
+
+<div class="section-title">
+
+<h2>✍️ Text Rewriter</h2>
+
+<p>Make your text clearer and more engaging.</p>
+
+</div>
+
+<div class="tool-area">
+
+<label>Enter Text</label>
+
+<textarea
+id="rewriteText"
+placeholder="Enter your text here..."
+></textarea>
+
+<button class="generate" onclick="rewriteText()">
+✨ Rewrite Text
+</button>
+
+<div id="rewriteResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- TOOL 5 -->
+
+<section class="section" id="ideas">
+
+<div class="section-title">
+
+<h2>💡 Content Ideas Generator</h2>
+
+<p>Never run out of content ideas.</p>
+
+</div>
+
+<div class="tool-area">
+
+<label>Your Niche</label>
+
+<input
+id="niche"
+placeholder="Example: Beauty, AI, Fitness"
+>
+
+<button class="generate" onclick="generateIdeas()">
+✨ Generate Ideas
+</button>
+
+<div id="ideasResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section" id="how">
+
+<div class="section-title">
+
+<h2>How It Works</h2>
+
+<p>Three simple steps.</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Choose a Tool</h3>
+
+<p>Select the tool you need.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Enter Information</h3>
+
+<p>Tell the tool what you want.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Get Your Result</h3>
+
+<p>Copy and use your result.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AD PLACEHOLDER -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Advertisement</h2>
+
+</div>
+
+<div class="ad-box">
+
+Advertisement space
+
+<br>
+
+<span>
+Replace this area with your approved advertising code later.
+</span>
+
+</div>
+
+</section>
+
+
+<!-- MONETIZATION -->
+
+<section class="section monetization" id="monetize">
+
+<div class="section-title">
+
+<h2>Monetization Structure</h2>
+
+<p>
+Ways this website can potentially generate revenue.
+</p>
+
+</div>
+
+
+<div class="money-grid">
+
+
+<div class="money-card">
+
+<h3>💰 Advertising</h3>
+
+<p>
+Once you have eligible traffic and an approved advertising
+account, advertising can be placed around your tools.
+</p>
+
+</div>
+
+
+<div class="money-card">
+
+<h3>🔗 Affiliate Marketing</h3>
+
+<p>
+Recommend relevant software or creator products using
+properly disclosed affiliate links.
+</p>
+
+</div>
+
+
+<div class="money-card">
+
+<h3>⭐ Premium Tools</h3>
+
+<p>
+Keep basic tools free and later offer advanced features
+through a paid plan.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section" id="faq">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+
+<div class="faq">
+
+<details>
+
+<summary>
+Are these tools free?
+</summary>
+
+<p>
+The starter tools on this website are designed to work
+without an AI API and can be offered for free.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Are these real AI tools?
+</summary>
+
+<p>
+This Version 2 starter uses browser-based templates and
+JavaScript logic. Connecting an AI API would make the
+generators dynamically powered by an AI model.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I make money from this website?
+</summary>
+
+<p>
+Potentially, yes. Revenue can come from advertising,
+affiliate marketing, subscriptions or paid tools, but
+income depends on traffic, audience and monetization
+eligibility.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I add more tools?
+</summary>
+
+<p>
+Yes. You can add calculators, image tools, writing tools,
+SEO tools and many other utilities.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>SmartAI Tools</h3>
+
+<p>
+Free tools for creators, students and businesses.
+</p>
+
+<p>
+© 2026 SmartAI Tools. All rights reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* COPY FUNCTION */
+
+function showResult(elementId,text){
+
+const box=document.getElementById(elementId);
+
+box.innerHTML=`
+<div class="result">${escapeHTML(text)}</div>
+<button class="copy" onclick="copyText(this)">
+Copy Result
+</button>
+`;
+
+}
+
+
+function escapeHTML(text){
+
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+function copyText(button){
+
+const result=button.previousElementSibling.innerText;
+
+navigator.clipboard.writeText(result);
+
+button.innerText="Copied!";
+
+setTimeout(()=>{
+button.innerText="Copy Result";
+},1500);
+
+}
+
+
+/* YOUTUBE TITLES */
+
+function generateTitles(){
+
+const topic=
+document.getElementById("titleTopic").value.trim();
+
+if(!topic){
+
+alert("Please enter a video topic.");
+
+return;
+
+}
+
+const titles=[
+
+`10 Things You Need to Know About ${topic}`,
+
+`The Ultimate Guide to ${topic}`,
+
+`7 Mistakes People Make With ${topic}`,
+
+`I Tried ${topic} -- Here's What Happened`,
+
+`The Truth About ${topic}`,
+
+`How to Master ${topic} Step by Step`,
+
+`You Won't Believe These ${topic} Tips`,
+
+`Beginner's Guide to ${topic}`,
+
+`5 Secrets About ${topic}`,
+
+`Watch This Before You Try ${topic}`
+
+];
+
+showResult(
+"titleResult",
+titles.map((x,i)=>(i+1)+". "+x).join("\n\n")
+);
+
+}
+
+
+/* DESCRIPTION */
+
+function generateDescription(){
+
+const topic=
+document.getElementById("descriptionTopic").value.trim();
+
+if(!topic){
+
+alert("Please enter a video topic.");
+
+return;
+
+}
+
+const description=
+
+`Welcome to our channel!
+
+In today's video, we're talking about ${topic}.
+
+In this video you'll discover useful tips,
+simple ideas and practical information about ${topic}.
+
+If you find this video helpful, don't forget to
+LIKE 👍 the video and SUBSCRIBE 🔔 for more content.
+
+Thanks for watching!
+
+#${topic.replace(/\s+/g,"")} #YouTube #Tips`;
+
+showResult(
+"descriptionResult",
+description
+);
+
+}
+
+
+/* SOCIAL CAPTION */
+
+function generateCaption(){
+
+const topic=
+document.getElementById("captionTopic").value.trim();
+
+const platform=
+document.getElementById("platform").value;
+
+if(!topic){
+
+alert("Please enter a post topic.");
+
+return;
+
+}
+
+const caption=
+
+`✨ ${topic}
+
+Small steps can create big results.
+
+Keep learning, keep growing and keep moving forward. 🚀
+
+What do you think?
+
+#${topic.replace(/\s+/g,"")} #ContentCreator #${platform}`;
+
+showResult(
+"captionResult",
+caption
+);
+
+}
+
+
+/* TEXT REWRITER */
+
+function rewriteText(){
+
+const text=
+document.getElementById("rewriteText").value.trim();
+
+if(!text){
+
+alert("Please enter some text.");
+
+return;
+
+}
+
+const rewritten=
+`Here is a cleaner version:
+
+${text}
+
+This version can be further improved by connecting the website
+to an AI language model.`;
+
+showResult(
+"rewriteResult",
+rewritten
+);
+
+}
+
+
+/* CONTENT IDEAS */
+
+function generateIdeas(){
+
+const niche=
+document.getElementById("niche").value.trim();
+
+if(!niche){
+
+alert("Please enter your niche.");
+
+return;
+
+}
+
+const ideas=[
+
+`5 Beginner Tips About ${niche}`,
+
+`10 Common Mistakes in ${niche}`,
+
+`The Ultimate Guide to ${niche}`,
+
+`Myths About ${niche} You Should Stop Believing`,
+
+`7 Secrets of Successful ${niche}`,
+
+`Beginner vs Expert: ${niche}`,
+
+`Things I Wish I Knew About ${niche}`,
+
+`How to Start ${niche} From Zero`,
+
+`Best Tools for ${niche}`,
+
+`10 Facts About ${niche}`
+
+];
+
+showResult(
+"ideasResult",
+ideas.map((x,i)=>(i+1)+". "+x).join("\n\n")
+);
+
+}
+
+</script>
+
+
+</body>
+</html>
