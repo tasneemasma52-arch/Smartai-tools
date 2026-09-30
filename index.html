@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart AI Tools</title>
-    <!-- AI Library -->
+    <!-- Puter.js AI Library -->
     <script src="https://js.puter.com/v2/"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,20 +16,40 @@
     </header>
 
     <main class="container">
+        <!-- Tool 1: AI Text Generator -->
         <div class="tool-card">
-            <h2>AI Text Generator</h2>
-            <p>Generate social media captions, emails, descriptions, and creative text.</p>
+            <h2>✍️ AI Text Generator</h2>
+            <p>Generate emails, creative posts, and descriptions.</p>
             
             <textarea id="textInput" placeholder="Write something... (e.g., Write a funny post about coffee)"></textarea>
-            
             <button onclick="generateText()">Generate Text</button>
             
-            <div id="textOutput" class="output-box">
-                Your AI-generated response will appear here...
-            </div>
+            <div id="textOutput" class="output-box">Your output will appear here...</div>
+            <button id="copyBtn1" onclick="copyToClipboard('textOutput', 'copyBtn1')" class="copy-btn">📋 Copy Text</button>
+        </div>
 
-            <!-- Copy Button -->
-            <button id="copyBtn" onclick="copyToClipboard()" style="margin-top: 10px; background-color: #10b981;">📋 Copy Text</button>
+        <!-- Tool 2: AI Summarizer -->
+        <div class="tool-card">
+            <h2>📄 AI Text Summarizer</h2>
+            <p>Paste long articles, essays, or notes to get bullet-point summaries.</p>
+            
+            <textarea id="summaryInput" placeholder="Paste long text here to summarize..."></textarea>
+            <button onclick="summarizeText()">Summarize Text</button>
+            
+            <div id="summaryOutput" class="output-box">Your summary will appear here...</div>
+            <button id="copyBtn2" onclick="copyToClipboard('summaryOutput', 'copyBtn2')" class="copy-btn">📋 Copy Summary</button>
+        </div>
+
+        <!-- Tool 3: AI Hashtag Generator -->
+        <div class="tool-card">
+            <h2>🏷️ Hashtag & Social Caption Generator</h2>
+            <p>Enter your topic to get viral captions and trending hashtags.</p>
+            
+            <textarea id="hashtagInput" placeholder="Enter your topic (e.g., Travel vlog in Paris)..."></textarea>
+            <button onclick="generateHashtags()">Generate Hashtags</button>
+            
+            <div id="hashtagOutput" class="output-box">Your hashtags will appear here...</div>
+            <button id="copyBtn3" onclick="copyToClipboard('hashtagOutput', 'copyBtn3')" class="copy-btn">📋 Copy Hashtags</button>
         </div>
     </main>
 
