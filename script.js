@@ -1,4 +1,4 @@
-async function generateText() {
+function generateText() {
   const userInput = document.getElementById("textInput").value;
   const outputDiv = document.getElementById("textOutput");
 
@@ -7,16 +7,14 @@ async function generateText() {
     return;
   }
 
-  // Show status while AI is working
-  outputDiv.innerText = "🤖 AI is generating your response, please wait...";
+  outputDiv.innerText = "🤖 AI is thinking...";
 
-  try {
-    // Calls Puter.js AI model directly
-    const response = await puter.ai.chat(userInput);
-    
-    // Displays the response in the result box
-    outputDiv.innerText = response.toString();
-  } catch (error) {
-    outputDiv.innerText = "Error generating response: " + error.message;
-  }
+  // Using standard Promise syntax
+  puter.ai.chat(userInput)
+    .then(function(response) {
+      outputDiv.innerText = response.toString();
+    })
+    .catch(function(error) {
+      outputDiv.innerText = "Error: " + error.message;
+    });
 }
