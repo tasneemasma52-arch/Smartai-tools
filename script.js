@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart AI Tools</title>
-    <!-- AI Library -->
-    <script src="https://js.puter.com/v2/"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+async function generateText() {
+  const userInput = document.getElementById("textInput").value;
+  const outputDiv = document.getElementById("textOutput");
 
-    <header>
-        <h1>🤖 Smart AI Tools</h1>
-        <p>Free AI tools for creators, students, and businesses.</p>
-    </header>
+  if (!userInput.trim()) {
+    outputDiv.innerText = "Please enter a prompt first!";
+    return;
+  }
 
-    <main class="container">
-        <div class="tool-card">
-            <h2>AI Text Generator</h2>
-            <p>Generate social media captions, emails, descriptions, and creative text.</p>
-            
-            <textarea id="textInput" placeholder="Write something... (e.g., Write a funny post about coffee)"></textarea>
-            
-            <button onclick="generateText()">Generate Text</button>
-            
-            <div id="textOutput" class="output-box">
-                Your AI-generated response will appear here...
-            </div>
-        </div>
-    </main>
+  // Show status while AI is working
+  outputDiv.innerText = "🤖 AI is generating your response, please wait...";
 
-    <footer>
-        <p>© 2026 Smart AI Tools. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  try {
+    // Calls Puter.js AI model directly
+    const response = await puter.ai.chat(userInput);
+    
+    // Displays the response in the result box
+    outputDiv.innerText = response.toString();
+  } catch (error) {
+    outputDiv.innerText = "Error generating response: " + error.message;
+  }
+}
